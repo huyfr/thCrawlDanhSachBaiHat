@@ -15,7 +15,8 @@ public class Main {
             String content = sc.next();
             sc.close();
             content = content.replaceAll("\\n+","");
-            Pattern pattern = Pattern.compile("name_song\">(.*?)</a>");
+//            Pattern pattern = Pattern.compile("name_song\">(.*?)</a>");
+            Pattern pattern = Pattern.compile("class=\"avatar_song\" title=\"(.*?)\" onclick=\"lt");
             Matcher matcher = pattern.matcher(content);
             while (matcher.find()){
                 System.out.println(matcher.group(1));
